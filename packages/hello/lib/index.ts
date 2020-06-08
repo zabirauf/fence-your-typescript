@@ -1,0 +1,1 @@
+export { fullName } from './fullName';

@@ -1,0 +1,6 @@
+{
+    "tags": ["hello"],
+    "exports": ["./lib/index"],
+    "imports": [],
+    "dependencies": []
+}
