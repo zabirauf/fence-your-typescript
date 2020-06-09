@@ -3,7 +3,6 @@ const webpack = require('webpack')
 const webpackConfig = require('./webpack.config.js')
 const goodFences = require('good-fences');
 
-
 gulp.task('check-fences', function() {
     return new Promise((resolve, reject) => {
         const result = goodFences.run({rootDir: './'});
@@ -17,8 +16,9 @@ gulp.task('check-fences', function() {
 });
 
 gulp.task('build', gulp.series('check-fences', assets));
+gulp.task('default', gulp.series('build'));
 
-function assets(cb) {
+function assets() {
     return new Promise((resolve, reject) => {
         webpack(webpackConfig, (err, stats) => {
             if (err) {

@@ -1,0 +1,6 @@
+{
+    "tags": ["app"],
+    "exports": ["lib/index.ts"],
+    "imports": ["hello"],
+    "dependencies": ["is-odd"]
+}
